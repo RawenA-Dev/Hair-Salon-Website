@@ -1,0 +1,257 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html{
+  font-size: 62.5%;
+}
+
+body{
+  font-size: 1.3rem;
+  font-family: 'Montserrat', sans-serif;
+  color: black;
+}
+
+a{
+  color: black;
+  text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6, nav a, .hero-text p, .hero-discount{
+  font-family: 'Libre Baskerville', serif;
+  text-transform: uppercase;
+}
+
+h2{
+  font-size: 7rem;
+  line-height: 9rem;
+}
+
+h3, .discount-price{
+  font-size: 4rem;
+  line-height: 5rem;
+}
+
+button{
+  display: inline-block;
+  border: none;
+  padding: 0.5rem 2rem;
+  margin: 0;
+  text-decoration: none;
+  text-transform: uppercase;
+  background: white;
+  color: black;
+  font-family: 'Libre Baskerville',serif;
+  font-size: 1.3rem;
+  cursor: pointer;
+  text-align: center;
+  transition: background 250ms ease-in-out,
+              transform 150ms ease;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  padding: 1rem 2rem;
+  border: 1px solid gray;
+}
+
+button:hover,
+button:focus{
+    background: black;
+    color: white;
+}
+
+button:focus{
+    outline: 1px solid gray;
+    outline-offset: -4px;
+}
+
+button:active {
+    transform: scale(0.99);
+}
+
+nav{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem;
+}
+
+.hamburger{
+  display: none;
+}
+
+.line{
+  width: 25px;
+  height: 1px;
+  margin-bottom: 4px;
+  background: black;
+}
+
+.nav-links, .nav-icons{
+  list-style: none;
+}
+
+nav li{
+  display: inline-block;
+  margin-right: 2rem;
+}
+
+.nav-icons img{
+  width: 2rem;
+}
+
+
+.hero-container{
+  background: url("hero-banner-hair.jpg");
+  background-position: right;
+  background-size: cover;
+  height: 80vh;
+  padding: 10%;
+}
+
+.hero-text{
+  width: 60%;
+  color: white;
+}
+
+.hero-text p{
+  letter-spacing: 0.3rem;
+  line-height: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.hero-discount{
+  background: black;
+  color: white;
+  width: 250px;
+  margin-top: 3rem;
+  padding: 2rem;
+}
+
+.hero-discount > h4{
+  margin: 2.5rem 0;
+}
+
+.hero-discount > button{
+  margin-top: 2rem;
+  width: 100%;
+  color: white;
+  background: black;
+}
+
+.hero-discount > button:hover,
+.hero-discount > button:focus{
+    background: white;
+    color: black;
+}
+
+.about{
+  padding: 10%;
+  margin: 2rem auto;
+}
+
+.about-flex-wrapper{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5rem;
+}
+
+.about-flex-box{
+  text-align: center;
+}
+
+.about-momentum-wrapper{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: lightgray;
+  flex-wrap: wrap;
+}
+.about-momentum-box{
+  width: 50%;
+  padding: 5% 10%;
+}
+.homegirls-wrapper{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 5rem;
+  gap: 5rem;
+  padding: 5%;
+  flex-wrap: wrap;
+}
+
+.homegirl-box{
+  border: 1px solid black;
+  width: 250px;
+  height: 400px;
+  background: gray;
+}
+.homegirl-details{
+  background: black;
+  color: white;
+  text-align: center;
+  margin: 0 auto;
+  padding: 1.5rem;
+  width: 80%;
+  transform: translateY(-20px);
+}
+.services-offer-wrapper{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 5% 10%;
+}
+.services-offer-box{
+  width: 50%;
+}
+
+.services-offer-box > h3{
+  font-size: 3rem;
+}
+
+@media (max-width: 950px){
+  h2{
+    font-size: 5.5rem;
+    line-height: 6.5rem;
+  }
+  .hero-text{
+    width: 90%;
+  }
+  .nav-links{
+    display: none;
+  }
+  .hamburger{
+    display: block;
+  }
+}
+
+@media (max-width: 500px){
+  h2{
+    font-size: 4.5rem;
+    line-height: 5.5rem;
+  }
+  .hero-container{
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.3)), url("hero-banner-hair.jpg");
+    background-position: right;
+    background-size: cover;
+  }
+
+  .hero-discount{
+    width: 80%;
+    margin: 14rem auto 0 auto;
+    padding: 2rem;
+  }
+  .hero-text{
+    text-align: center;
+  }
+  .nav-icons{
+    display: none;
+  }
+}
